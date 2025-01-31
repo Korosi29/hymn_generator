@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFWC Hymns</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner-con">
+        <div id="year-container">
+        </div>
+        
+        <div class="theme-switch-main">
+          <button onclick="switchTheme();">Theme</button>
+        </div>
+
+        <div>
+          <a href="about.html" class="about-nav">About</a>
+        </div>
+        
+    </div>
+  </header>
+  <div class="background-logo-main">
+    <div class="background-logo-inner">
+  </div>
+</div>
+  <main>
+    <h1>EFWC Hymns Generator</h1>
+    <h2 id="date-heading"></h2>
+    <div style="text-align: center;"><button onclick="copyToClipboard();" id="copy-btn">Copy</button></div>
+    <div id="hymn-body">
+      <div id="hymn-no"><span style="font-weight: bold;">Hymn No:</span> </div>
+      <div id="hymn-title"><span style="font-weight: bold;">Title:</span> </div>
+      <br/>
+      <div id="hymn-content">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>Developed By FLEXORA</div>
+    <div class="footer-logo"></div>
+    <div style="text-decoration: underline;cursor: pointer;">About FLEXORA</div>
+  </footer>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
