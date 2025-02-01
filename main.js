@@ -3,7 +3,7 @@
 
 const sundaysOfTheYr = [];
 
-const currentDate = new Date();
+const currentDate = new Date(2025, 1, 19);
 
 //create dynamic year so that I don't worry about it year when it's new year
 createDynamicYear();
@@ -123,4 +123,6 @@ function switchTheme(){
   }
 }
 
-
+function goToAboutPage(){
+  window.location.href = "about.html";
+}
