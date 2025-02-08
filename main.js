@@ -3,7 +3,7 @@
 
 const sundaysOfTheYr = [];
 
-const currentDate = new Date();
+const currentDate = new Date(2025,1, 7);
 
 //create dynamic year so that I don't worry about it year when it's new year
 createDynamicYear();
@@ -26,8 +26,8 @@ function getAllSundaysOfTheYr(year){
   
   const hour = 23;
   const minutes = 59;
-  for(let month = 0; month < 12; month++){
-    for(let date = 1; date <= 31; date++){
+  for(let month = 1; month < 12; month++){
+    for(let date = 7; date <= 31; date++){
       //literate on months and date to fetch all Sundays
       const dateToIterate = new Date(year, month, date, hour,minutes);
       if(dateToIterate.getMonth() !== month)break;//break if we exceed months days
