@@ -126,3 +126,5 @@ function switchTheme(){
 function goToAboutPage(){
   window.location.href = "about.html";
 }
+
+Swal.fire("Note", "We apologize about the bug that makes hymns not to display properly. Note that this web page is still under development and we are working relentlessly to improve it. @Flexora ", "info");
