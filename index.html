@@ -7,10 +7,38 @@
   <title>EFWC Hymns</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="sass.css">
 </head>
 <body>
   <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+       <a href="index.html" id="year-container" class="navbar-item" style="font-size: 1.3rem;"></a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <!-- Menu items -->
+      <div id="navbarBasicExample" class="navbar-menu navbarBasicExample">
+        <div class="navbar-start">
+          <a href="index.html" class="navbar-item">Home</a>
+          <a href="about.html" class="navbar-item">About</a>
+          <a class="navbar-item">Want to be a member?</a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <button class="button is-warning">Sign up</button>
+                <button class="button is-primary"><strong>Sign in</strong></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </nav>  </header>
+  <!-- <header>
     <div class="header-inner-con">
         <div id="year-container">
         </div>
@@ -24,15 +52,11 @@
         </div>
         
     </div>
-  </header>
-  <div class="background-logo-main">
-    <div class="background-logo-inner">
-  </div>
-</div>
+  </header> -->
   <main>
-    <h1>EFWC Hymns Generator</h1>
-    <h2 id="date-heading"></h2>
-    <div style="text-align: center;"><button onclick="copyToClipboard();" id="copy-btn">Copy</button></div>
+    <h1 class="is-size-3">EFWC Hymns Generator</h1>
+    <h2 class="is-size-3" id="date-heading"></h2>
+    <div style="text-align: center;"><button onclick="copyToClipboard();" id="copy-btn" class="button is-small">Copy</button></div>
     <div id="hymn-body">
       <div id="hymn-no"><span style="font-weight: bold;">Hymn No:</span> </div>
       <div id="hymn-title"><span style="font-weight: bold;">Title:</span> </div>
@@ -46,6 +70,28 @@
     <div class="footer-logo"></div>
     <div style="text-decoration: underline;cursor: pointer;" onclick="goToAboutPage();">About FLEXORA</div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the "navbar-menu" element
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+});
+  </script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>

@@ -84,7 +84,7 @@ function getHymnContent(){
       //checks if there is a chorus or not so to not display the index
       if(hymnsData[i][j]){
       //create a div for every chorus or verse
-        const hymnVerseDivCon = document.createElement("div");
+        const hymnParagraph = document.createElement("p");
         // checks if there is a chorus 
         if(j === 3){
           chorusOrVerse = "Chorus";
@@ -92,9 +92,9 @@ function getHymnContent(){
           chorusOrVerse = "Verse";
         }
         //add verse or chorus to the created div
-        hymnVerseDivCon.innerHTML = `<span>${chorusOrVerse}</span> <br/> <br/> ${hymnsData[i][j]}`;
+        hymnParagraph.innerHTML = `<span>${chorusOrVerse}</span> <br/> <br/> ${hymnsData[i][j]}`;
        //update on dom
-       hymnContentContainer.appendChild(hymnVerseDivCon); 
+       hymnContentContainer.appendChild(hymnParagraph); 
       } 
     }
     //if Sunday next Sunday is found break
@@ -127,4 +127,10 @@ function goToAboutPage(){
   window.location.href = "about.html";
 }
 
-Swal.fire("Note", "We apologize about the bug that makes hymns not to display properly. Note that this web page is still under development and we are working relentlessly to improve it. @Flexora ", "info");
+Swal.fire({
+  title: "Note",
+  text: "We apologize about the bug that makes hymns not to display properly. Note that this web page is still under development and we are working relentlessly to improve it. @Flexora ",
+  confirmButtonText: "Let's go",
+  confirmButtonColor: "#0060d0"
+});
+
