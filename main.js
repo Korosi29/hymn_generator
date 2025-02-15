@@ -129,8 +129,9 @@ function goToAboutPage(){
 
 Swal.fire({
   title: "Note",
-  text: "We apologize about the bug that makes hymns not to display properly. Note that this web page is still under development and we are working relentlessly to improve it. @Flexora ",
+  html: "We apologize about the bug that made the page to display inappropriately.<br/> Please bear with us as this web page is still under development.<br/><i>@Flexora </i>",
   confirmButtonText: "Let's go",
-  confirmButtonColor: "#0060d0"
+  confirmButtonColor: "#0060d0",
+  icon: "info",
 });
 

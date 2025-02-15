@@ -7594,7 +7594,7 @@ footer div {
 .footer-logo {
   width: 130px;
   height: 130px;
-  background-image: url("logo.jpg");
+  background-image: url("logo-transparent.png");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
