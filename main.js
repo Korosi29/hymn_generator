@@ -6,19 +6,7 @@ const sundaysOfTheYr = [];
 const currentDate = new Date();
 
 //create dynamic year so that I don't worry about it year when it's new year
-createDynamicYear();
-
-function createDynamicYear(){
-  const yrContainer = document.getElementById("year-container");
-  const currentYr = document.createElement("div");
-  currentYr.setAttribute("class", "year-con");
-  // Display current date on header
- currentYr.textContent = currentDate.getFullYear();
- yrContainer.appendChild(currentYr);
- //pass current year as an argument to my another the function that will get me all the Sundays of the year
- getAllSundaysOfTheYr(currentDate.getFullYear());
- 
-}
+getAllSundaysOfTheYr(currentDate.getFullYear());
 
 function getAllSundaysOfTheYr(year){
 
@@ -27,7 +15,7 @@ function getAllSundaysOfTheYr(year){
   const hour = 23;
   const minutes = 59;
   for(let month = 1; month < 12; month++){
-    for(let date = 7; date <= 31; date++){
+    for(let date = 1; date <= 31; date++){
       //literate on months and date to fetch all Sundays
       const dateToIterate = new Date(year, month, date, hour,minutes);
       if(dateToIterate.getMonth() !== month)break;//break if we exceed months days
@@ -109,9 +97,9 @@ function copyToClipboard(){
   let hymnContent = document.getElementById("hymn-body");
  //copy hymn body text content to the clipboard 
  navigator.clipboard.writeText(hymnContent.textContent);
- document.getElementById("copy-btn").textContent = "Copied";
+ document.getElementById("copy-btn").textContent = "Copied to clipBoard";
  setTimeout(() => {
-  document.getElementById("copy-btn").textContent = "Copy";
+  document.getElementById("copy-btn").textContent = "Copy to clipBoard";
  }, 3000);
 }
 
@@ -129,9 +117,27 @@ function goToAboutPage(){
 
 Swal.fire({
   title: "Note",
-  html: "We apologize about the bug that made the page to display inappropriately.<br/> Please bear with us as this web page is still under development.<br/><i>@Flexora </i>",
-  confirmButtonText: "Let's go",
+  html: "Due to use issues, the data used is very limited and so are the available hymns.<br/><i>@Flexora </i>",
+  confirmButtonText: "I Do Not Care Let's Go",
   confirmButtonColor: "#0060d0",
   icon: "info",
 });
 
+Swal.fire({
+  title: "Note",
+  html: "A comment section is available for user feedback. Please kindly use it to say some words about the page.",
+  confirmButtonText: "Alright",
+  confirmButtonColor: "#0060d0",
+  icon: "info",
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Note",
+      html: "Due to use issues, the data(number of hymns) used is very limited. If you are using this at your church, please notify the developers for posible improvement.<br/><br/><i>@Flexora </i>",
+      confirmButtonText: "I Do Not Care Let's Go",
+      confirmButtonColor: "#b00000",
+      icon: "warning",
+    });
+  }
+});

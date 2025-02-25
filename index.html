@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EFWC Hymns</title>
+  <title>Flexora Hymns</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link rel="stylesheet" href="sass.css">
@@ -12,12 +12,12 @@
 <body>
 
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
 
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-       <a href="index.html" id="year-container" class="navbar-item" style="font-size: 1.3rem;"></a>
+       <a href="index.html" class="navbar-item" style="font-size: 1.3rem;"><span style="font-weight: bold;color: yellow;">Flex<span style="color:darkorange;">Hymns</span></span></a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -30,7 +30,7 @@
         <div class="navbar-start">
           <a href="index.html" class="navbar-item">Home</a>
           <a href="about.html" class="navbar-item">About</a>
-          <a class="navbar-item">Want to be a member?</a>
+          <a class="navbar-item">Want to join the followship?</a>
         </div>
         <div class="navbar-end">
             <div class="navbar-item">
@@ -58,9 +58,9 @@
     </div>
   </header> -->
   <main>
-    <h1 class="is-size-3">EFWC Hymns Generator</h1>
+    <h1 style="visibility: hidden;">Flexora Hymns</h1>
     <h2 class="is-size-3" id="date-heading"></h2>
-    <div style="text-align: center;"><button onclick="copyToClipboard();" id="copy-btn" class="button is-small">Copy</button></div>
+    <div style="text-align: center;"><button onclick="copyToClipboard();" id="copy-btn" class="button is-small">Copy to clipBoard</button></div>
     <div id="hymn-body">
       <div id="hymn-no"><span style="font-weight: bold;">Hymn No:</span> </div>
       <div id="hymn-title"><span style="font-weight: bold;">Title:</span> </div>
